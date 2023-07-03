@@ -1,1 +1,111 @@
-/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+:root {
+  --color-primary: rgb(22, 99, 246);
+  --color-primary_light: #EDF3FD;
+}
+
+
+.nav__list .mdc-list-item__primary-text, .custom-expansion-panel .mdc-list-item__primary-text{
+  color: #fff ;
+  font-weight: 500 ;
+  display: flex ;
+  gap: 1rem;
+  justify-items: center ;
+}
+/* .mdc-list-item:hover::before */
+.nav__list .mdc-list-item:hover::before{
+  color: #fff;
+  background-color: transparent !important;
+  opacity: 0;
+}
+.nav__list .mdc-list-item.mdc-list-item--with-one-line{
+  color: #fff;
+}
+.nav__list .mdc-list-item .mdc-list-item__primary-text:focus {
+  color: #fff !important;
+}
+.nav__list:hover{
+  background-color: transparent;
+}
+.nav__list .mdc-list-item__primary-text:hover{
+  color: #fff !important;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+.nav__list--footer .mdc-list-item__primary-text {
+  color: #7D9BD5;
+}
+.mdc-list-item.mdc-list-item--with-one-line {
+  height: 36px !important;
+}
+
+/* icon expansor */
+.mat-expansion-panel-header-description, .mat-expansion-indicator::after{
+  color: white;
+}
+
+/* Nav Vertical */
+.sidenav__header{
+  flex-direction: column !important;
+  padding: 72px 16px !important;
+  gap: 16px ;
+  justify-content: center !important;
+  align-items: self-start !important;
+  height: 8rem !important;
+  color:#fff ;
+}
+.sidenav{
+  width: 250px !important;
+}
+.title__expansion .mat-content{
+  display: flex;
+  flex-direction: row !important;
+  gap: 1rem;
+}
+
+.sidenav-container {
+  height: 100%;
+}
+
+.side__nav--vertical {
+  width: 220px;
+}
+
+.side__nav--vertical .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Sidevar vertical */
+
+.side__nav--vertical{
+  background-color: var(--color-primary);
+
+}
+
+
+/* Box List DEFAULT */
+  .custom-expansion-panel {
+    box-shadow: none ;
+    border-color: transparent ;
+    background-color: var(---color-primary);
+  }
+  .nav-link{
+    color: #fff;
+    font-weight: 800 !important;
+  }
+
+
+
+/* Sidevar Horizontal */
+.side__nav--horizontal{
+  /* display: flex;
+  justify-content: space-between; */
+
+}

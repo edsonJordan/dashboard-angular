@@ -1,0 +1,158 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="side__nav--vertical" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar class="sidenav__header">
+      <img class="img-logo" src="https://ac-landing-pages-user-uploads-production.s3.amazonaws.com/0000137283/e9bfcb7d-f859-44a1-a317-716b1b595d09.png" alt="">
+      <span>Gestion de Horas</span>
+    </mat-toolbar>
+    <mat-expansion-panel class="custom-expansion-panel">
+      <mat-expansion-panel-header class="title__expansion nav-link">
+        <mat-icon>dashboard</mat-icon>
+        Inicio
+      </mat-expansion-panel-header>
+      <mat-list>
+        <a mat-list-item href="#" class="nav-link">Sublink 1</a>
+        <a mat-list-item href="#" class="nav-link">Sublink 2</a>
+        <a mat-list-item href="#" class="nav-link">Sublink 3</a>
+      </mat-list>
+    </mat-expansion-panel>
+    <mat-nav-list class="nav__list">
+      <mat-list-item href="#" class="nav-list__link">
+        <mat-icon>more_time</mat-icon>
+        Mis Horas
+      </mat-list-item>
+      <mat-list-item href="#" class="nav-list__link">
+        <mat-icon>group</mat-icon>
+        Clientes
+      </mat-list-item>
+      <mat-list-item href="#" class="nav-list__link">
+        <mat-icon>home_repair_service</mat-icon>
+        Proyectos
+      </mat-list-item>
+      <mat-list-item href="#" class="nav-list__link">
+        <mat-icon>list</mat-icon>
+        Skill
+      </mat-list-item>
+      <mat-list-item href="#" class="nav-list__link">
+        <mat-icon>construction</mat-icon>
+        Usuarios Skill
+      </mat-list-item>
+      <mat-list-item href="#" class="nav-list__link">
+        <mat-icon>assignment_ind</mat-icon>
+        Cargo Genérico
+      </mat-list-item>
+      <mat-list-item href="#" class="nav-list__link">
+        <mat-icon>currency_exchange</mat-icon>
+        Centro Costo
+      </mat-list-item>
+      <mat-list-item href="#" class="nav-list__link">
+        <mat-icon>apartment</mat-icon>
+        Empresas
+      </mat-list-item>
+      <mat-list-item href="#" class="nav-list__link">
+        <mat-icon>groups</mat-icon>
+        Gerencias
+      </mat-list-item>
+      <mat-list-item href="#" class="nav-list__link">
+        <mat-icon>monetization_on</mat-icon>
+        Monedas
+      </mat-list-item>
+      <mat-list-item href="#" class="nav-list__link">
+        <mat-icon>warehouse</mat-icon>
+        Industrias
+      </mat-list-item>
+      <mat-list-item href="#" class="nav-list__link">
+        <mat-icon>contacts</mat-icon>
+        Proveedores
+      </mat-list-item>
+      <mat-list-item href="#" class="nav-list__link">
+        <mat-icon>handshake</mat-icon>
+        Tipo de Contratos
+      </mat-list-item>
+      <mat-list-item href="#" class="nav-list__link">
+        <mat-icon>attach_money</mat-icon>
+        Tipo Cambio
+      </mat-list-item>
+      <mat-list-item href="#" class="nav-list__link">
+        <mat-icon>person</mat-icon>
+        Usuarios
+      </mat-list-item>
+      <mat-list-item href="#" class="nav-list__link">
+        <mat-icon>event_available</mat-icon>
+        Feriados
+      </mat-list-item>
+    </mat-nav-list>
+    <mat-divider></mat-divider>
+    <mat-nav-list class="nav__list">
+      <mat-list-item href="#" class="nav-list__link">
+        <mat-icon>settings</mat-icon>
+        Configuraciones
+      </mat-list-item>
+    </mat-nav-list>
+    <mat-nav-list class="nav__list nav__list--footer">
+      <mat-list-item href="#" class="nav-list__link">
+        Ayuda
+      </mat-list-item>
+      <mat-list-item href="#" class="nav-list__link">
+        Contacto
+      </mat-list-item>
+      <mat-list-item href="#" class="nav-list__link">
+        <mat-icon>logout</mat-icon>
+        Cerrar Sesión
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="side__nav--horizontal" >
+    <mat-toolbar  class="dashboard__header" >
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        >
+        <mat-icon aria-label="Side nav toggle icon">notes</mat-icon>
+      </button>
+      <div class="dashboard-header__title">
+        <h1>Clientes</h1>
+        <span>Lunes,06 de abril del 2003 7:00 am</span>
+      </div>
+      <div class="dashboard-header__user">
+        <div>
+          <button
+            type="button"
+            mat-menu-item [matMenuTriggerFor]="subMenuAlert"
+            class="icon__notification"
+            >
+            <mat-icon  aria-label="Side nav toggle icon">notifications</mat-icon>
+          </button>
+          <mat-menu #subMenuAlert="matMenu">
+            <button mat-menu-item class="sub-menu__link">Sublink 1</button>
+            <button mat-menu-item class="sub-menu__link">Sublink 2</button>
+            <button mat-menu-item class="sub-menu__link">Sublink 3</button>
+          </mat-menu>
+        </div>
+        <img class="logo-user__icon" src="https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745" alt="">
+        <div class="user-nav" >
+          <label class="user-nav__title">Edson Huamani Ñahuin</label>
+          <label class="user-nav__position">Consultor</label>
+        </div>
+          <button
+          mat-menu-item [matMenuTriggerFor]="subMenuUser"
+          type="button"
+          class="icon__notification"
+          >
+          <mat-icon  aria-label="Side nav toggle icon">expand_more</mat-icon>
+        </button>
+        <mat-menu #subMenuUser="matMenu">
+          <button mat-menu-item class="sub-menu__link">Sublink 1</button>
+          <button mat-menu-item class="sub-menu__link">Sublink 2</button>
+          <button mat-menu-item class="sub-menu__link">Sublink 3</button>
+        </mat-menu>
+      </div>
+
+    </mat-toolbar>
+    <app-dashboard></app-dashboard>
+  </mat-sidenav-content>
+</mat-sidenav-container>
